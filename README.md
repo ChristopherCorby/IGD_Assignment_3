@@ -21,3 +21,5 @@ September 02:5
 - Reorganised readme
 - Assorted other procrastination
 
+September 02:6
+- Completed animated sprites for all four ghosts

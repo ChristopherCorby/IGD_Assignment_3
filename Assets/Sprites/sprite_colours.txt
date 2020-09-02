@@ -11,7 +11,7 @@ Outline:	#626262
 Light:		#FFFFFF
 Dark:		#030303
 
-# RED GHOST - ALIVE
+# RED GHOST - ALIVE		
 Body:		#C30404
 Outline:	#750000
 Light:		#F94D4D
