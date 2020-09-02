@@ -6,3 +6,4 @@ September 02:
 - Created Unity Project
 - Set up .gitignore
 - Created branch Development from branch Master
+- Created branch Dev-Visual from branch Development
