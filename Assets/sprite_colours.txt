@@ -1,0 +1,60 @@
+##################
+# SPRITE COLOURS #
+##################
+
+# PACMAN
+# tbd
+
+# ALL GHOSTS - SCARED
+Body:		#BDBDBD 
+Outline:	#626262
+Light:		#FFFFFF
+Dark:		#030303
+
+# RED GHOST - ALIVE
+Body:		#C30404
+Outline:	#750000
+Light:		#F94D4D
+Dark:		#2A0000
+
+# RED GHOST - RECOVERING /  DEAD
+Body:		#C06161
+Outline:	#6C3131
+Light:		#FCA6A6
+Dark:		#170202
+
+# PURPLE GHOST - ALIVE
+Body:		#840292
+Outline:	#52015B
+Light:		#A73CB2
+Dark:		#230026
+
+# PURPLE GHOST - RECOVERING /  DEAD
+Body:		#A160A8
+Outline:	#5A325F
+Light:		#D39ED9
+Dark:		#130215
+
+# BLUE GHOST - ALIVE
+Body:		#0E3D94
+Outline:	#05245C
+Light:		#476DB4
+Dark:		#000D24
+
+# BLUE GHOST - RECOVERING /  DEAD
+Body:		#667DA9
+Outline:	#34435F
+Light:		#A3B6DA
+Dark:		#020814
+
+# ORANGE GHOST - ALIVE
+Body:		#DE5E00
+Outline:	#883A00
+Light:		#FF9D55
+Dark:		#391800
+
+# ORANGE GHOST - RECOVERING /  DEAD
+Body:		#CE8E5F
+Outline:	#754E31
+Light:		#FFCEAA
+Dark:		#1E0E02
