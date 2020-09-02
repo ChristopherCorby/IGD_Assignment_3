@@ -1,0 +1,28 @@
+########
+# DONE #
+########
+
+- 
+
+########
+# TODO #
+########
+
+# PACMAN
+- Pacman Idle
+
+# GHOST
+- Ghost Idle
+
+# MISC
+- Power Pellet
+- Bonus Score
+- Life Indicator
+
+# MAP
+- Wall Outside Corner
+- Wall Outside
+- Wall Inside Corner
+- Wall Inside
+- Wall T-Junction
+

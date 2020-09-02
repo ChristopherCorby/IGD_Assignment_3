@@ -1,0 +1,26 @@
+########
+# DONE #
+########
+
+- 
+
+########
+# TODO #
+########
+
+# PACMAN
+- Pacman_Move
+- Pacman_Dead
+
+# GHOST (X 4)
+- Ghost_Eyes
+- Ghost_Move_Up
+- Ghost_Move_Left
+- Ghost_Move_Down
+- Ghost_Move_Right
+- Ghost_Scared
+- Ghost_Recover
+- Ghost_Dead
+
+# MISC
+- Power Pellet Flash
