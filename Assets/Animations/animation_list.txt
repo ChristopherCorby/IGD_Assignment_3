@@ -2,22 +2,26 @@
 # DONE #
 ########
 
+# PACMAN
+- Pacman_Move
+
 # GHOST ( X 4 )
 - Ghost_Move_Up
 - Ghost_Move_Left
 - Ghost_Move_Down
 - Ghost_Move_Right
-- Ghost_Scared
 - Ghost_Recover
 - Ghost_Dead
+
+# GHOST ( SHARED )
+- Ghost_Scared
+
+# MISC
+- Power_Pellet_Flash
 
 ########
 # TODO #
 ########
 
 # PACMAN
-- Pacman_Move
 - Pacman_Dead
-
-# MISC
-- Power Pellet Flash

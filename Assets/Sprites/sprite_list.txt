@@ -2,7 +2,8 @@
 # DONE #
 ########
 
-- 
+# MISC
+- Pellet
 
 ########
 # TODO #
@@ -15,7 +16,6 @@
 - Ghost Idle
 
 # MISC
-- Power Pellet
 - Bonus Score
 - Life Indicator
 
