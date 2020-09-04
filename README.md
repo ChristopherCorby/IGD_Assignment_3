@@ -34,3 +34,7 @@ September 04:1
 - Completed animated pacman death
 - Drew bonus pellet sprite
 - Drew wall sprites
+
+September 04:2
+- Merged Dev-Visual back into Development
+- Created branch Dev-Audio from branch Development
