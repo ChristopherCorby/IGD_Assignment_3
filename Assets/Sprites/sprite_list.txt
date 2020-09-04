@@ -4,20 +4,7 @@
 
 # MISC
 - Pellet
-
-########
-# TODO #
-########
-
-# PACMAN
-- Pacman Idle
-
-# GHOST
-- Ghost Idle
-
-# MISC
-- Bonus Score
-- Life Indicator
+- Bonus Pellet
 
 # MAP
 - Wall Outside Corner
@@ -25,4 +12,10 @@
 - Wall Inside Corner
 - Wall Inside
 - Wall T-Junction
+
+
+########
+# TODO #
+########
+
 

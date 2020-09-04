@@ -23,3 +23,14 @@ September 02:5
 
 September 02:6
 - Completed animated sprites for all four ghosts
+
+September 03
+- Completed animated power pellet
+- Started pacman animations
+- Drew pellet sprite
+
+September 04:1
+- Completed animated pacman life counter
+- Completed animated pacman death
+- Drew bonus pellet sprite
+- Drew wall sprites
