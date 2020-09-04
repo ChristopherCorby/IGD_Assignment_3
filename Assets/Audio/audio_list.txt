@@ -1,0 +1,20 @@
+#############
+# COMPLETED #
+#############
+
+-
+
+########
+# TODO #
+########
+
+# PACMAN
+- sfx_pacman_walk
+- sfx_pacman_eat
+- sfx_pacman_bump
+
+# MUSIC
+- bgm_intro
+- bgm_main
+- bgm_ghost_scared
+- bgm_ghost_dead
