@@ -2,19 +2,31 @@
 # COMPLETED #
 #############
 
--
+# MUSIC
+- bgm_main
+- bgm_ghost_scared
 
-########
-# TODO #
-########
+Cognitive Dissonance - Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+
+
+- bgm_intro_riff
+- bgm_ghost_dead
+
+Long Time Coming - Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+
 
 # PACMAN
 - sfx_pacman_walk
 - sfx_pacman_eat
 - sfx_pacman_bump
 
-# MUSIC
-- bgm_intro
-- bgm_main
-- bgm_ghost_scared
-- bgm_ghost_dead
+########
+# TODO #
+########
+
+
+
