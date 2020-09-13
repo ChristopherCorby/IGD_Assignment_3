@@ -50,3 +50,5 @@ September 13:1
 - Corrected size error of Map T-Junction sprite
 - Beginning attempt to build levelGen
 
+September 13:2
+- Began building LevelGen: spawning for all assets in Q2, rotation only for outer corner walls

@@ -21,7 +21,7 @@ public class LevelGenerator : MonoBehaviour
             {0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 2, 5, 4, 4, 0, 3, 4, 4, 0},
             {2, 2, 2, 2, 2, 1, 5, 3, 3, 0, 4, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 4, 0, 0, 0}
         };
 
     // Key:
@@ -34,19 +34,19 @@ public class LevelGenerator : MonoBehaviour
     // 6 - Power Pellet
     // 7 - Outside Junction
      
-    public Sprite levelMap1;
-    public Sprite levelMap2;
-    public Sprite levelMap3;
-    public Sprite levelMap4;
-    public Sprite levelMap5;
-    public Sprite levelMap6; //PLACEHOLDER! Replace Bonus Pellet with Power Pellet once confirmed functional
-    public Sprite levelMap7;
+    public GameObject levelMap1;
+    public GameObject levelMap2;
+    public GameObject levelMap3;
+    public GameObject levelMap4;
+    public GameObject levelMap5;
+    public GameObject levelMap6; //PLACEHOLDER! Replace Bonus Pellet with Power Pellet once confirmed functional
+    public GameObject levelMap7;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int yLoop = 0; yLoop < 14; yLoop++) 
+        for (int yLoop = 0; yLoop < 15; yLoop++) 
         {
             for (int xLoop = 0; xLoop < 14; xLoop++) 
             {
@@ -65,27 +65,143 @@ public class LevelGenerator : MonoBehaviour
     // Spawns a specified map element, in all four quadrants
     void spawnMapElement(int mapElement, int xLoop, int yLoop) 
     {
-        Vector3 q2pos = new Vector3(15-xLoop, 14-yLoop, 0);
+        Vector3 q2pos = new Vector3(-15 + xLoop, 14 - yLoop, 0);
         Quaternion q2rot = new Quaternion(0,0,0,0);
 
         switch (mapElement)
         {
             case 0:
-                Debug.Log("Empty tile");
                 break;
 
             case 1:
                 Debug.Log("Corner tile");
-                Instantiate(levelMap1, q2pos, q2rot);
+                spawnOuterCorner(xLoop, yLoop);
                 break;
 
             case 2:
                 Debug.Log("Outer wall");
-                Instantiate(levelMap2, q2pos, q2rot);
+                Instantiate(levelMap2, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 3:
+                Instantiate(levelMap3, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 4:
+                Instantiate(levelMap4, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 5:
+                Instantiate(levelMap5, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 6:
+                Instantiate(levelMap6, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 7:
+                Instantiate(levelMap7, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                break;
+
+            default:
                 break;
         }
 
             //don't mirror yet just get it working
+
+    }
+
+    void spawnOuterCorner(int xLoop, int yLoop) 
+    {
+        // I'm sure there are better approaches? A try-catch on OutOfBounds just moves the edge-case solving, without removing it
+
+        if (xLoop == 0 && yLoop == 0)
+        {
+            Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+        }
+
+        else if (xLoop == 0 && yLoop < 14)
+        {
+            if (levelMap[yLoop - 1, xLoop] == 1 || levelMap[yLoop - 1, xLoop] == 2)
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 90));
+            }
+            else
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+            }
+        }
+
+        else if (xLoop == 0 && yLoop == 14)
+        {
+            Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 90));
+        }
+
+        else if (yLoop == 0 && xLoop < 13)
+        {
+            if (levelMap[yLoop, xLoop - 1] == 1 || levelMap[yLoop, xLoop - 1] == 2)
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 270));
+            }
+            else
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+            }
+        }
+
+        else if (yLoop == 0 && xLoop == 13)
+        {
+            Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 270));
+        }
+
+        else if (yLoop < 14 && xLoop == 13)
+        {
+            if (levelMap[yLoop + 1, xLoop] == 1 || levelMap[yLoop + 1, xLoop] == 2)
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 270));
+            }
+            else
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 180));
+            }
+        }
+
+        else if (yLoop == 14 && xLoop == 13)
+        {
+            Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 180));
+        }
+
+        else if (yLoop == 14 && xLoop < 13) 
+        {
+            if (levelMap[yLoop, xLoop - 1] == 1 || levelMap[yLoop, xLoop - 1] == 2)
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 180));
+            }
+            else 
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 90));
+            }
+        }
+
+        else if (xLoop > 0 && xLoop < 13 && yLoop > 0 && yLoop < 14)
+        {
+            if ((levelMap[yLoop, xLoop + 1] == 1 || levelMap[yLoop, xLoop + 1] == 2) && (levelMap[yLoop + 1, xLoop] == 1 || levelMap[yLoop + 1, xLoop] == 2))
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+            }
+            else if ((levelMap[yLoop + 1, xLoop] == 1 || levelMap[yLoop + 1, xLoop] == 2) && (levelMap[yLoop, xLoop - 1] == 1 || levelMap[yLoop, xLoop - 1] == 2))
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 270));
+            }
+            else if ((levelMap[yLoop, xLoop - 1] == 1 || levelMap[yLoop, xLoop - 1] == 2) && (levelMap[yLoop - 1, xLoop] == 1 || levelMap[yLoop - 1, xLoop] == 2))
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 180));
+            }
+            else
+            {
+                Instantiate(levelMap1, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 90));
+            }
+        }
 
     }
 }
