@@ -39,11 +39,14 @@ September 04:2
 - Merged Dev-Visual back into Development
 - Created branch Dev-Audio from branch Development
 
-<<<<<<< Updated upstream
-September 10
-- Added all BGM and SFX
-=======
 Septmember 10
 - Added all BGM and SFX
 - Merged Dev-Audio back into Development
->>>>>>> Stashed changes
+- Created branch Dev-LevelGen from branch Development
+
+September 13:1
+- Updated sprites, resolving import format issue in Unity
+--TODO check animations to make sure they all worked properly
+- Corrected size error of Map T-Junction sprite
+- Beginning attempt to build levelGen
+
