@@ -52,3 +52,7 @@ September 13:1
 
 September 13:2
 - Began building LevelGen: spawning for all assets in Q2, rotation only for outer corner walls
+
+September 14:1
+- Fixed Map T-Junction sprite but for real this time
+- Continued work on LevelGen: spawning for outer wall, outer corner, and inner corners in all quadrants
