@@ -56,3 +56,7 @@ September 13:2
 September 14:1
 - Fixed Map T-Junction sprite but for real this time
 - Continued work on LevelGen: spawning for outer wall, outer corner, and inner corners in all quadrants
+
+September 14:2
+- Completed level generator
+- Merged Dev-LevelGen back into Development

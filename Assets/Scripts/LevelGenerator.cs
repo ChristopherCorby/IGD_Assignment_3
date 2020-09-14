@@ -86,19 +86,19 @@ public class LevelGenerator : MonoBehaviour
                 break;
 
             case 4:
-                Instantiate(levelMap4, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                makeInnerWall(xLoop, yLoop);
                 break;
 
             case 5:
-                Instantiate(levelMap5, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                spawnPellet(xLoop, yLoop);
                 break;
 
             case 6:
-                Instantiate(levelMap6, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                spawnPowerPellet(xLoop, yLoop);
                 break;
 
             case 7:
-                Instantiate(levelMap7, new Vector3(-15 + xLoop, 14 - yLoop, 0), Quaternion.Euler(0, 0, 0));
+                spawnJunction(xLoop, yLoop);
                 break;
 
             default:
@@ -203,10 +203,10 @@ public class LevelGenerator : MonoBehaviour
 
     void spawnOuterCorner(int xLoop, int yLoop, int form) 
     {
-        Vector3 q1pos = new Vector3(15 - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
-        Vector3 q2pos = new Vector3(-15 + xLoop, 14 - yLoop, 0);    // top left / no change
-        Vector3 q3pos = new Vector3(-15 + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
-        Vector3 q4pos = new Vector3(15 - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
 
         switch (form) 
         {
@@ -258,10 +258,10 @@ public class LevelGenerator : MonoBehaviour
 
     void spawnOuterWall(int xLoop, int yLoop, int form)
     {
-        Vector3 q1pos = new Vector3(15 - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
-        Vector3 q2pos = new Vector3(-15 + xLoop, 14 - yLoop, 0);    // top left / no change
-        Vector3 q3pos = new Vector3(-15 + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
-        Vector3 q4pos = new Vector3(15 - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
 
         switch (form)
         {
@@ -322,10 +322,10 @@ public class LevelGenerator : MonoBehaviour
 
     void spawnInnerCorner(int xLoop, int yLoop, int form)
     {
-        Vector3 q1pos = new Vector3(15 - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
-        Vector3 q2pos = new Vector3(-15 + xLoop, 14 - yLoop, 0);    // top left / no change
-        Vector3 q3pos = new Vector3(-15 + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
-        Vector3 q4pos = new Vector3(15 - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
 
         switch (form)
         {
@@ -360,5 +360,101 @@ public class LevelGenerator : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    void makeInnerWall(int xLoop, int yLoop) 
+    {
+        if (yLoop == 0)
+        {
+            spawnInnerWall(xLoop, yLoop, 2);
+        }
+        else if (yLoop == 14)
+        {
+            spawnInnerWall(xLoop, yLoop, 1);
+        }
+        else if ((levelMap[yLoop - 1, xLoop] == 3 || levelMap[yLoop - 1, xLoop] == 4 || levelMap[yLoop - 1, xLoop] == 7) &&
+            (levelMap[yLoop + 1, xLoop] == 3 || levelMap[yLoop + 1, xLoop] == 4))
+        {
+            spawnInnerWall(xLoop, yLoop, 1);
+        }
+        else if ((levelMap[yLoop - 1, xLoop] == 3 || levelMap[yLoop - 1, xLoop] == 4 || levelMap[yLoop - 1, xLoop] == 7) &&
+            (levelMap[yLoop + 1, xLoop] != 3 && levelMap[yLoop + 1, xLoop] != 4))
+        {
+            spawnInnerWall(xLoop, yLoop, 2);
+        }
+        else 
+        {
+            spawnInnerWall(xLoop, yLoop, 2);
+        }
+    }
+
+    void spawnInnerWall(int xLoop, int yLoop, int form)
+    {
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+
+        switch (form)
+        {
+            case 1:
+                Instantiate(levelMap4, q1pos, Quaternion.Euler(0, 0, 0));
+                Instantiate(levelMap4, q2pos, Quaternion.Euler(0, 0, 0));
+                Instantiate(levelMap4, q3pos, Quaternion.Euler(0, 0, 0));
+                Instantiate(levelMap4, q4pos, Quaternion.Euler(0, 0, 0));
+                break;
+
+            case 2:
+                Instantiate(levelMap4, q1pos, Quaternion.Euler(0, 0, 90));
+                Instantiate(levelMap4, q2pos, Quaternion.Euler(0, 0, 90));
+                Instantiate(levelMap4, q3pos, Quaternion.Euler(0, 0, 90));
+                Instantiate(levelMap4, q4pos, Quaternion.Euler(0, 0, 90));
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    void spawnPellet(int xLoop, int yLoop) 
+    {
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+
+        Instantiate(levelMap5, q1pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap5, q2pos, Quaternion.Euler(0, 0, 0));
+        if (yLoop != 14)
+        {
+            Instantiate(levelMap5, q3pos, Quaternion.Euler(0, 0, 0));
+            Instantiate(levelMap5, q4pos, Quaternion.Euler(0, 0, 0));
+        }
+    }
+
+    void spawnPowerPellet(int xLoop, int yLoop) 
+    {
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+
+        Instantiate(levelMap6, q1pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap6, q2pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap6, q3pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap6, q4pos, Quaternion.Euler(0, 0, 0));
+    }
+
+    void spawnJunction(int xLoop, int yLoop) 
+    {
+        Vector3 q1pos = new Vector3(13.5f - xLoop, 14 - yLoop, 0);     // top right / horizontal mirror
+        Vector3 q2pos = new Vector3(-13.5f + xLoop, 14 - yLoop, 0);    // top left / no change
+        Vector3 q3pos = new Vector3(-13.5f + xLoop, -14 + yLoop, 0);   // bottom left / vertical mirror
+        Vector3 q4pos = new Vector3(13.5f - xLoop, -14 + yLoop, 0);    // bottom right / horizontal+vertical mirror
+
+        Instantiate(levelMap7, q1pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap7, q2pos, Quaternion.Euler(0, 0, 0));
+        Instantiate(levelMap7, q3pos, Quaternion.Euler(0, 0, 180));
+        Instantiate(levelMap7, q4pos, Quaternion.Euler(0, 0, 180));
     }
 }
