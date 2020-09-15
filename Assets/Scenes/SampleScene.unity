@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114840229}
   - component: {fileID: 114840228}
+  - component: {fileID: 114840230}
   m_Layer: 0
   m_Name: LoadManager
   m_TagString: Untagged
@@ -160,7 +161,7 @@ MonoBehaviour:
     type: 3}
   levelMap5: {fileID: 3283235436368896413, guid: 459a7863d792b5d429255b90bdefb3cb,
     type: 3}
-  levelMap6: {fileID: 2757509003153717444, guid: c96cd85fab40c3d4b9dc88edbd8a456a,
+  levelMap6: {fileID: 4111653877071514847, guid: 45baa0c101df01349a27e5a6f1e36285,
     type: 3}
   levelMap7: {fileID: 2129758746206930838, guid: 53c485ca2fcbf9c4595cab50bf02d333,
     type: 3}
@@ -178,6 +179,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114840230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114840227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771acb79bbe9c4a4fa144dd833d1b970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demoPacman: {fileID: 6996422229664367258, guid: b15a18183777cbf4a8f8900acf79fdfa,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,3 +64,6 @@ September 14:2
 September 15:1
 - Created branch Dev-Animation from branch Development
 
+September 15:2
+- Created animation_controller for Power Pellet
+- Created animation_controller for Pacman_Move
