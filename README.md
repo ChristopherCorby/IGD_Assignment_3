@@ -60,3 +60,7 @@ September 14:1
 September 14:2
 - Completed level generator
 - Merged Dev-LevelGen back into Development
+
+September 15:1
+- Created branch Dev-Animation from branch Development
+
