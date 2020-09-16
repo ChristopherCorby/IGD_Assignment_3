@@ -67,3 +67,7 @@ September 15:1
 September 15:2
 - Created animation_controller for Power Pellet
 - Created animation_controller for Pacman_Move
+
+September 16
+- Constructed animation demo loop for Pacman_Move
+- Implemented BGM
