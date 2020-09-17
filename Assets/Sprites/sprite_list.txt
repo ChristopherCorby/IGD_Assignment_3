@@ -5,6 +5,7 @@
 # MISC
 - Pellet
 - Bonus Pellet
+- Pacman_Life_Count
 
 # MAP
 - Wall Outside Corner

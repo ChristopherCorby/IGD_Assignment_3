@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -621758561211360072
     second: Ghost_Scared_1
+  - first:
+      213: -8740130754629484580
+    second: Ghost_Scared_0
+  - first:
+      213: -7785983724665944334
+    second: Ghost_Scared_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,19 +101,19 @@ TextureImporter:
       name: Ghost_Scared_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 144
-        width: 96
-        height: 96
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47cffaf0725108ea0800000000000000
-      internalID: -5872670656580027276
+      spriteID: cdfb7d7c261d4b680800000000000000
+      internalID: -8740130754629484580
       vertices: []
       indices: 
       edges: []
@@ -116,19 +122,19 @@ TextureImporter:
       name: Ghost_Scared_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 96
-        height: 96
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc50fef1e11f57f0800000000000000
-      internalID: -621758561211360072
+      spriteID: 2f64058ed01a2f390800000000000000
+      internalID: -7785983724665944334
       vertices: []
       indices: 
       edges: []

@@ -25,12 +25,12 @@ public class Tweener : MonoBehaviour
 
                 if (Vector3.Distance(activeTween.Target.position, activeTween.EndPos) > 0.1f)
                 {
-                    Debug.Log("Lerping");
+                    //Debug.Log("Lerping");
                     activeTween.Target.position = Vector3.Lerp(activeTween.StartPos, activeTween.EndPos, timeFractionCubed);
                 }
                 else
                 {
-                    Debug.Log("Jumping");
+                    //Debug.Log("Jumping");
                     activeTween.Target.position = activeTween.EndPos;
                     activeTween = null;
                 }
@@ -48,7 +48,7 @@ public class Tweener : MonoBehaviour
         }
         else 
         {
-            Debug.Log("Tween exists?");
+            //Debug.Log("Tween exists?");
             return false;
         }
 
@@ -58,10 +58,10 @@ public class Tweener : MonoBehaviour
     {
         if (activeTween != null) 
         {
-            Debug.Log("Active tween is not null!");
+            //Debug.Log("Active tween is not null!");
             return true;
         }
-        Debug.Log("Active tween is null!");
-            return false;
+        //Debug.Log("Active tween is null!");
+        return false;
     }
 }

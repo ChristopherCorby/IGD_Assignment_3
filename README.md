@@ -46,7 +46,6 @@ Septmember 10
 
 September 13:1
 - Updated sprites, resolving import format issue in Unity
---TODO check animations to make sure they all worked properly
 - Corrected size error of Map T-Junction sprite
 - Beginning attempt to build levelGen
 
@@ -71,3 +70,7 @@ September 15:2
 September 16
 - Constructed animation demo loop for Pacman_Move
 - Implemented BGM
+
+September 17:1
+- Constructed animation demos for Ghost_Blue
+- Constructed animation demos for Ghost_Orange

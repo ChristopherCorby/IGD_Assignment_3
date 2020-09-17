@@ -5,7 +5,6 @@
 # PACMAN
 - Pacman_Move
 - Pacman_Death
-- Pacman_Life_Count
 
 # GHOST ( X 4 )
 - Ghost_Move_Up
