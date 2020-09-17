@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ghost_Orange_Scared
+  m_Name: Ghost_Red_Dead
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5872670656580027276, guid: e2ec6ac6c4fcd9a468cb9518fdfbc3b1,
+      value: {fileID: 6578364837359276864, guid: 8325ad73333338043a8b0e167d4004d7,
         type: 3}
     - time: 0.2
-      value: {fileID: -621758561211360072, guid: e2ec6ac6c4fcd9a468cb9518fdfbc3b1,
+      value: {fileID: 886764501048993739, guid: 8325ad73333338043a8b0e167d4004d7,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,8 +44,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5872670656580027276, guid: e2ec6ac6c4fcd9a468cb9518fdfbc3b1, type: 3}
-    - {fileID: -621758561211360072, guid: e2ec6ac6c4fcd9a468cb9518fdfbc3b1, type: 3}
+    - {fileID: 6578364837359276864, guid: 8325ad73333338043a8b0e167d4004d7, type: 3}
+    - {fileID: 886764501048993739, guid: 8325ad73333338043a8b0e167d4004d7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

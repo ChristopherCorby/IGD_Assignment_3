@@ -74,3 +74,9 @@ September 16
 September 17:1
 - Constructed animation demos for Ghost_Blue
 - Constructed animation demos for Ghost_Orange
+
+September 17:2
+- Constructed animation demos for Ghost_Purple
+- Constructed animation demos for Ghost_Red
+- Constructed gallery of visual assets
+- Merged all final branches

@@ -42,7 +42,7 @@ public class Tweener : MonoBehaviour
     {
         if (TweenExists(targetObject) == false)
         {
-            Debug.Log("Tween added");
+            //Debug.Log("Tween added");
             activeTween = new Tween(targetObject, startPos, endPos, Time.time, duration);
             return true;
         }
